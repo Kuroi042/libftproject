@@ -1,22 +1,25 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mbouderr <mbouderr@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/10/27 02:12:05 by mbouderr          #+#    #+#             */
+/*   Updated: 2022/10/27 04:38:38 by mbouderr         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
+#include "libft.h"
 
+int	ft_isalpha(int c)
+{
+	unsigned char	i;
 
-int ft_isalpha (int  c)
-
-    {
-        if((c >= 'A' && c<= 'Z' ) || (c >= 'a' && c <= 'z'))
-       { 
-           return (1);
-       }
-        else
-        return (0);
-    }
-    #include <stdio.h>
-
-// int main(){
-
-//    char r =  'f' ;
-//    ft_isalpha(r);
-//    printf("%d",ft_isalpha(r));
- 
-// }
+	i = (unsigned char)c;
+	if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
+	{
+		return (1);
+	}
+	return (0);
+}

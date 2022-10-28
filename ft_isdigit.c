@@ -6,26 +6,18 @@
 /*   By: mbouderr <mbouderr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 22:36:36 by mbouderr          #+#    #+#             */
-/*   Updated: 2022/10/04 22:38:42 by mbouderr         ###   ########.fr       */
+/*   Updated: 2022/10/27 02:28:02 by mbouderr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 
-int ft_isdigit (int c)
+int	ft_isdigit(int c)
 {
-    if((c >= 48 && c <= 57))
-    {
-        return 1;
-
-    }
-    else 
-    return 0;
-
+	if ((c >= 48 && c <= 57))
+	{
+		return (1);
+	}
+	else
+		return (0);
 }
-// #include <stdio.h>
-// int main()
-// {
-//    char  i = '5';
-//     digit(i);
-//     printf("%d",digit(i));
-// }

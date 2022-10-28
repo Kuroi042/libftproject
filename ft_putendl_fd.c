@@ -1,23 +1,21 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mbouderr <mbouderr@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/10/27 02:40:16 by mbouderr          #+#    #+#             */
+/*   Updated: 2022/10/28 00:47:11 by mbouderr         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
-#include <stdio.h>
-#include<unistd.h>
 #include <fcntl.h>
-void ft_putendl_fd(char *s, int fd)  
+
+void	ft_putendl_fd(char *s, int fd)
 {
 	if (s)
-	ft_putstr_fd(s,fd);
-	ft_putchar_fd('\n',fd);
+		ft_putstr_fd(s, fd);
+	ft_putchar_fd('\n', fd);
 }
-
-// /*int main()
-// {
-// 	int fd;
-	
-// 	fd = open("test1.txt", O_CREAT | O_RDWR);
-// 	char str[] = "charafchdidjesus11";
-// 	char str2[] = "charafchdidjesus111";
-// 	ft_putendl_fd(str,fd);
-// 	ft_putendl_fd(str2,fd);
-// 	close (fd);
-	
-// }*/

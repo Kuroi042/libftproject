@@ -1,17 +1,25 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mbouderr <mbouderr@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/10/27 03:02:25 by mbouderr          #+#    #+#             */
+/*   Updated: 2022/10/27 03:02:30 by mbouderr         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-int ft_strlen(char *str)
+#include "libft.h"
+
+size_t	ft_strlen(const char *str)
 {
-    int i = 0;
-    while(str[i] != '\0')
-    {
-        i++;
-    }
-    return i;
+	int	i;
+
+	i = 0;
+	while (str[i] != '\0')
+	{
+		i++;
+	}
+	return (i);
 }
-#include <stdio.h>
-// int main()
-// {
-//     char str[]= "ch*objaraf";
-//     printf("%d",ft_strlen(str));
-    
-// }

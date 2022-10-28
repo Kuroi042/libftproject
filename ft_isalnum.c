@@ -1,18 +1,21 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mbouderr <mbouderr@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/10/27 02:10:36 by mbouderr          #+#    #+#             */
+/*   Updated: 2022/10/27 16:49:09 by mbouderr         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-int ft_isalnum (int c)
+#include "libft.h"
+
+int	ft_isalnum(int c)
 {
-    if ((c >= 48 && c <= 57)||(c >= 'A' && c<= 'Z' ) || (c >= 'a' && c <= 'z'))
-    {
-        return 1;
-    }
-    else 
-    return 0;
-
+	if ((c >= 48 && c <= 57) || (c >= 'A' && c <= 'Z') || (c >= 'a'
+			&& c <= 'z'))
+		return (1);
+	return (0);
 }
-// #include <stdio.h>
-// int main()
-// {
-//    char t = '1';
-//     isalnum(t);
-//     printf("%d", isalnum(t));
-// }
