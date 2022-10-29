@@ -6,7 +6,7 @@
 /*   By: mbouderr <mbouderr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 03:06:06 by mbouderr          #+#    #+#             */
-/*   Updated: 2022/10/28 02:48:43 by mbouderr         ###   ########.fr       */
+/*   Updated: 2022/10/28 21:29:23 by mbouderr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,28 +14,28 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char	*str;
-	char	*p;
 	size_t	i;
+	size_t	j;
+	char	*str;
 
-	i = 0;
-	str = (char *)s;
 	if (!s)
 		return (NULL);
-	p = (char *)malloc(sizeof(char) * (len + 1));
-	if (!p)
-		return (NULL);
-	if (start >= ft_strlen(str))
+	if (start >= ft_strlen(s))
 	{
-		free(p);
-		p = (char *)malloc(sizeof(char));
-		if (!p)
-			return (NULL);
-		p[0] = '\0';
-		return (p);
+		str = (char *)ft_calloc(1, sizeof(char));
+		return (str);
 	}
-	while (i < len)
-		p[i++] = str[start++];
-	p[i] = '\0';
-	return (p);
+	if (len >= ft_strlen(s) - start)
+		len = ft_strlen(s) - start;
+	str = (char *)malloc(sizeof(char) * (len + 1));
+	if (!str)
+		return (NULL);
+	i = start;
+	j = 0;
+	while (s[i] && i < len + start)
+	{
+		str[j++] = s[i++];
+	}
+	str[j] = '\0';
+	return (str);
 }
